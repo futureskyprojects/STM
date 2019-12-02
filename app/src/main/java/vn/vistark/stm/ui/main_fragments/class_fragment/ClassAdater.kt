@@ -10,8 +10,12 @@ import vn.vistark.stm.data.model.ClassObj
 
 class ClassAdater(
     private val classes: ArrayList<ClassObj>,
-    private val tvClassEmpty: TextView
+    private val tvClassEmpty: TextView?
 ) : RecyclerView.Adapter<ClassViewHolder>() {
+
+    var onItemClick: ((ClassObj) -> Unit)? = null
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassViewHolder {
         val v =
             LayoutInflater.from(parent.context).inflate(R.layout.class_item_layout, parent, false)
@@ -26,10 +30,14 @@ class ClassAdater(
         val classObj = classes[position]
         holder.bind(classObj)
 
+        holder.lnRoot.setOnClickListener {
+            onItemClick?.invoke(classObj)
+        }
+
         if (classes.size > 0) {
-            tvClassEmpty.visibility = View.GONE
+            tvClassEmpty?.visibility = View.GONE
         } else {
-            tvClassEmpty.visibility = View.VISIBLE
+            tvClassEmpty?.visibility = View.VISIBLE
         }
     }
 

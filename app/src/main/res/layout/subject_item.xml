@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <TextView
+        android:id="@+id/tvSubjectName"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_subject"
+        android:gravity="center"
+        android:padding="10dp"
+        android:shadowColor="#e74c3c"
+        android:shadowDx="2"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="TÊN MÔN HỌC"
+        android:textAllCaps="true"
+        android:textColor="#2980b9"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>

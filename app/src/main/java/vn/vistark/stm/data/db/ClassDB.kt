@@ -50,26 +50,6 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
         return isSuccess != -1
     }
 
-    fun getClassObj(id: Int): ClassObj {
-        var classObj = ClassObj()
-        val db = this.readableDatabase
-        val cursor =
-            db.rawQuery("SELECT * FROM ${ClassObj.TB_NAME} WHERE ${ClassObj.ID} = $id", emptyArray<String>())
-        if (cursor != null) {
-            cursor.moveToFirst()
-            while (cursor.moveToNext()) {
-                classObj = ClassObj(
-                    cursor.getInt(0),
-                    cursor.getString(1),
-                    cursor.getString(2)
-                )
-            }
-        }
-        cursor.close()
-        db.close()
-        return classObj
-    }
-
     fun getAllClassObj(): ArrayList<ClassObj> {
         val classObjs = ArrayList<ClassObj>()
         val db = this.readableDatabase
@@ -79,7 +59,7 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
             cursor.moveToFirst()
             while (cursor.moveToNext()) {
                 val classObj = ClassObj(
-                    cursor.getInt(0),
+                    cursor.getLong(0),
                     cursor.getString(1),
                     cursor.getString(2)
                 )

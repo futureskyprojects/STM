@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_students"
+        android:icon="@drawable/ic_students_cap"
+        android:title="Students" />
+
+    <item
+        android:id="@+id/navigation_attendance"
+        android:icon="@drawable/ic_qr_code"
+        android:title="Attendance" />
+
+    <item
+        android:id="@+id/navigation_analysis"
+        android:icon="@drawable/ic_analysis"
+        android:title="Analysis" />
+
+</menu>

@@ -1,8 +1,8 @@
 package vn.vistark.stm.data.model
 
 class StudentObj(
-    val id: Int,
-    var classId: Int,
+    val id: Long,
+    var classId: Long,
     var name: String,
     var info: String
 ) {

@@ -8,13 +8,45 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStudents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tvSelectedClassName" />
+
+
+        <TextView
+            android:id="@+id/tvStudentEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="Student is empty"
+            android:textColor="#718093"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvSelectedClassName"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_gradient"
+            android:gravity="center"
+            android:text="Tap here to select class"
+            android:textAllCaps="true"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/fabAddNewStudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@id/tvSelectedClassName"
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/ic_add"
+            android:visibility="gone" />
     </RelativeLayout>
 </FrameLayout>

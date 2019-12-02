@@ -60,8 +60,8 @@ class ClassFragment : Fragment(), BaseFrg {
                     Toasty.warning(context!!, "Please input class name", Toasty.LENGTH_SHORT, false)
                         .show()
                 } else {
-                    val timestamp = System.currentTimeMillis() / 100000
-                    val classObj = ClassObj(timestamp.toInt(), className, description)
+                    val timestamp = System.currentTimeMillis()
+                    val classObj = ClassObj(timestamp, className, description)
                     if (ClassDB(context!!).addClassObj(classObj)) {
                         Toasty.success(
                             context!!,
