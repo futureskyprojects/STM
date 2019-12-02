@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editPass"
+        android:icon="@drawable/ic_key_black"
+        android:title="Chang password" />
+    <item
+        android:id="@+id/updateAvatar"
+        android:icon="@drawable/photo_camera"
+        android:title="Update Avatar" />
+</menu>
