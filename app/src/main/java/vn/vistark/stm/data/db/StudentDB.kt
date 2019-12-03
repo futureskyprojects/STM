@@ -12,8 +12,14 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         const val DB_VERSION = 1
     }
 
+    init {
+        val studentObj = StudentObj(1, 1, "init", "")
+        addStudent(studentObj)
+        deleteStudent(studentObj)
+    }
+
     override fun onCreate(db: SQLiteDatabase?) {
-        val sql = "CREATE TABLE ${StudentObj.TB_NAME}(" +
+        val sql = "CREATE TABLE IF NOT EXISTS ${StudentObj.TB_NAME}(" +
                 "${StudentObj.ID} INTEGER PRIMARY KEY," +
                 "${StudentObj.CLASS_ID} INTEGER," +
                 "${StudentObj.NAME} TEXT," +
@@ -74,10 +80,30 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         return res != -1
     }
 
+    fun getStudent(studentId: Long): StudentObj? {
+        val db = this.readableDatabase
+        var studentObj: StudentObj? = null
+        val cursor =
+            db.rawQuery(
+                "SELECT * FROM ${StudentObj.TB_NAME} WHERE ${StudentObj.ID} = $studentId;",
+                null
+            )
+        if (cursor != null) {
+            cursor.moveToFirst()
+            studentObj = StudentObj(
+                cursor.getLong(0),
+                cursor.getLong(1),
+                cursor.getString(2),
+                cursor.getString(3)
+            )
+        }
+        return studentObj
+    }
+
     fun getAllStudent(): ArrayList<StudentObj> {
         val db = this.readableDatabase
         val arr = ArrayList<StudentObj>()
-        val cursor = db.rawQuery("SELECT * FROM ${StudentObj.TB_NAME}", emptyArray<String>())
+        val cursor = db.rawQuery("SELECT * FROM ${StudentObj.TB_NAME};", emptyArray<String>())
         if (cursor != null) {
             cursor.moveToFirst()
             while (cursor.moveToNext()) {

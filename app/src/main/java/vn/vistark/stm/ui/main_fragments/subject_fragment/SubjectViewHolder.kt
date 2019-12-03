@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.subject_item.view.*
 import vn.vistark.stm.R
+import vn.vistark.stm.data.Bus
 import vn.vistark.stm.data.model.SubjectObj
 import vn.vistark.stm.ui.subject_manager.SubjectManager
 
@@ -19,7 +20,7 @@ class SubjectViewHolder(v: View) : RecyclerView.ViewHolder(v) {
                 tvSubjectName.context,
                 SubjectManager::class.java
             )
-            intent.putExtra(SubjectObj.ARG_NAME, subjectObj)
+            Bus.SELECTED_SUBJECT = subjectObj.id
             tvSubjectName.context.startActivity(
                 intent
             )

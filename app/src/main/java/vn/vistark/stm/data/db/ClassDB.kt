@@ -13,8 +13,14 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
 
     }
 
+    init {
+        val classObj = ClassObj(1, "init class", "")
+        addClassObj(classObj)
+        deleteClassObj(classObj)
+    }
+
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTable = "CREATE TABLE ${ClassObj.TB_NAME}(" +
+        val createTable = "CREATE TABLE IF NOT EXISTS ${ClassObj.TB_NAME}(" +
                 "${ClassObj.ID} INTEGER PRIMARY KEY," +
                 "${ClassObj.NAME} TEXT," +
                 "${ClassObj.DESCRIPTION} TEXT" +
@@ -23,7 +29,7 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("DROP TABLE IF EXISTS ${ClassObj.TB_NAME}")
+        db?.execSQL("DROP TABLE IF EXISTS ${ClassObj.TB_NAME};")
         onCreate(db)
     }
 
@@ -54,7 +60,7 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
         val classObjs = ArrayList<ClassObj>()
         val db = this.readableDatabase
         val cursor =
-            db.rawQuery("SELECT * FROM ${ClassObj.TB_NAME}", emptyArray<String>())
+            db.rawQuery("SELECT * FROM ${ClassObj.TB_NAME};", emptyArray<String>())
         if (cursor != null) {
             cursor.moveToFirst()
             while (cursor.moveToNext()) {

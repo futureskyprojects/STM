@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.subject_manager.ui.attendance.scan.ScanActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +26,7 @@
             android:layout_toStartOf="@id/ivMore"
             android:layout_toEndOf="@id/ivBackArrow"
             android:gravity="center"
-            android:text="@string/app_name"
+            android:text="SCAN STUDENT's QR"
             android:textColor="#FFF"
             android:textSize="20sp" />
 
@@ -37,26 +38,4 @@
             android:background="@drawable/press_effect"
             app:srcCompat="@drawable/logo_trans" />
     </RelativeLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_nav_menu" />
-
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/nav_view"
-        android:layout_marginTop="?android:attr/actionBarSize"
-        app:defaultNavHost="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
-
 </RelativeLayout>

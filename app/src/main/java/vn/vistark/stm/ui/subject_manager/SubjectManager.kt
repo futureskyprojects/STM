@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.activity_subject_manager.*
 import vn.vistark.stm.R
 
 class SubjectManager : AppCompatActivity() {
@@ -17,14 +18,14 @@ class SubjectManager : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_students, R.id.navigation_attendance, R.id.navigation_analysis
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            tvTitle.text = destination.label
+        }
         navView.setupWithNavController(navController)
+
+        ivBackArrow.setOnClickListener {
+            finish()
+        }
     }
 }

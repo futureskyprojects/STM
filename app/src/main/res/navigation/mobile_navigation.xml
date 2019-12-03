@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_students"
-        android:name="vn.vistark.stm.ui.subject_manager.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="vn.vistark.stm.ui.subject_manager.ui.students.StudentsFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_subject_students" />
 
     <fragment
         android:id="@+id/navigation_attendance"
-        android:name="vn.vistark.stm.ui.subject_manager.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="vn.vistark.stm.ui.subject_manager.ui.attendance.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/fragment_attendance" />
 
     <fragment
         android:id="@+id/navigation_analysis"
-        android:name="vn.vistark.stm.ui.subject_manager.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="vn.vistark.stm.ui.subject_manager.ui.analysis.NotificationsFragment"
+        android:label="Analysis"
+        tools:layout="@layout/fragment_analysis" />
 </navigation>

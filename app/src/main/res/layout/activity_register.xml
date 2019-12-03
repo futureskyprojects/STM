@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/inp"
             android:drawableStart="@drawable/ic_name"
+            android:drawableLeft="@drawable/ic_name"
             android:drawablePadding="10dp"
             android:hint="Họ và tên"
             android:imeOptions="actionNext"

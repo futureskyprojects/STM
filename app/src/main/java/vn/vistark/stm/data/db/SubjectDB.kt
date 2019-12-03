@@ -12,9 +12,15 @@ class SubjectDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         const val DB_VERSION = 1
     }
 
+    init {
+        val subjectObj = SubjectObj(1, "test", "")
+        addSubject(subjectObj)
+        deleteSubject(subjectObj)
+    }
+
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(
-            "CREATE TABLE ${SubjectObj.TB_NAME} (" +
+            "CREATE TABLE IF NOT EXISTS ${SubjectObj.TB_NAME} (" +
                     "${SubjectObj.ID} INTEGER NOT NULL PRIMARY KEY," +
                     "${SubjectObj.NAME} TEXT," +
                     "${SubjectObj.DESCRIPTION} TEXT" +
@@ -23,7 +29,7 @@ class SubjectDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("DROP TABLE IF EXISTS ${SubjectObj.TB_NAME}")
+        db?.execSQL("DROP TABLE IF EXISTS ${SubjectObj.TB_NAME};")
         onCreate(db)
     }
 
@@ -67,7 +73,7 @@ class SubjectDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         val db = this.readableDatabase
         val subjects = ArrayList<SubjectObj>()
 
-        val cursor = db.rawQuery("SELECT * FROM ${SubjectObj.TB_NAME}", emptyArray<String>())
+        val cursor = db.rawQuery("SELECT * FROM ${SubjectObj.TB_NAME};", emptyArray<String>())
         if (cursor != null) {
             cursor.moveToFirst()
             while (cursor.moveToNext()) {
