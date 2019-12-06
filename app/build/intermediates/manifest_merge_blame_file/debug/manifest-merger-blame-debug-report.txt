@@ -1,0 +1,130 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="vn.vistark.stm"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:5:5-81
+11-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:6:5-80
+12-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:7:5-67
+13-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:8:5-66
+14-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:8:22-63
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:10:5-65
+15-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:10:22-62
+16
+17    <uses-feature android:name="android.hardware.camera" />
+17-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:12:5-60
+17-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:12:19-57
+18    <uses-feature android:name="android.hardware.camera.autofocus" />
+18-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:13:5-70
+18-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:13:19-67
+19
+20    <application
+20-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:15:5-55:19
+21        android:allowBackup="true"
+21-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:17:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\419c1e4c69cc84d0a9af6aedb8b39477\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:hardwareAccelerated="true"
+24-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:18:9-43
+25        android:icon="@mipmap/ic_launcher"
+25-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:19:9-43
+26        android:label="@string/app_name"
+26-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:20:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:21:9-54
+28        android:supportsRtl="true"
+28-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:22:9-35
+29        android:theme="@style/AppTheme"
+29-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:23:9-40
+30        android:usesCleartextTraffic="true" >
+30-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:16:9-44
+31        <activity
+31-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:24:9-26:59
+32            android:name="vn.vistark.stm.ui.subject_manager.ui.attendance.scan.Scan"
+32-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:25:13-71
+33            android:theme="@style/AppTheme.NoActionBar" />
+33-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:26:13-56
+34        <activity
+34-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:27:9-29:68
+35            android:name="vn.vistark.stm.ui.subject_manager.ui.attendance.scan.ScanResultActivity"
+35-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:28:13-85
+36            android:theme="@style/AppTheme.NoActionBar" />
+36-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:29:13-56
+37        <activity
+37-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:30:9-38:20
+38            android:name="vn.vistark.stm.ui.subject_manager.SubjectManager"
+38-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:31:13-62
+39            android:label="@string/title_activity_subject_manager"
+39-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:32:13-67
+40            android:parentActivityName="vn.vistark.stm.ui.MainActivity"
+40-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:33:13-58
+41            android:theme="@style/AppTheme.NoActionBar" >
+41-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:34:13-56
+42            <meta-data
+42-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:35:13-37:66
+43                android:name="android.support.PARENT_ACTIVITY"
+43-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:36:17-63
+44                android:value="vn.vistark.stm.ui.MainActivity" />
+44-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:37:17-63
+45        </activity>
+46        <activity
+46-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:39:9-41:50
+47            android:name="vn.vistark.stm.ui.register.RegisterActivity"
+47-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:40:13-57
+48            android:theme="@style/SplashTheme" />
+48-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:41:13-47
+49        <activity
+49-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:42:9-50:20
+50            android:name="vn.vistark.stm.ui.splash.SplashScreen"
+50-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:43:13-51
+51            android:theme="@style/SplashTheme" >
+51-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:44:13-47
+52            <intent-filter>
+52-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:45:13-49:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:46:17-69
+53-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:46:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:48:17-77
+55-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:48:27-74
+56            </intent-filter>
+57        </activity>
+58        <activity
+58-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:51:9-54:59
+59            android:name="vn.vistark.stm.ui.MainActivity"
+59-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:52:13-44
+60            android:label="@string/app_name"
+60-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:53:13-45
+61            android:theme="@style/AppTheme.NoActionBar" />
+61-->F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:54:13-56
+62
+63        <provider
+63-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\22c1ccbd4e83665b81cc6d4d748f863b\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+64            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+64-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\22c1ccbd4e83665b81cc6d4d748f863b\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+65            android:authorities="vn.vistark.stm.lifecycle-process"
+65-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\22c1ccbd4e83665b81cc6d4d748f863b\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+66            android:exported="false"
+66-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\22c1ccbd4e83665b81cc6d4d748f863b\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+67            android:multiprocess="true" />
+67-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\22c1ccbd4e83665b81cc6d4d748f863b\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+68    </application>
+69
+70</manifest>

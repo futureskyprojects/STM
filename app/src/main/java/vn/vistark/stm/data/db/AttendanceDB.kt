@@ -33,16 +33,17 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
         val db = this.readableDatabase
 
         val cursor = db.rawQuery(
-            "SELECT DISTINCT ${AttendanceObj.NAME} FROM ${AttendanceObj.TB_NAME};",
+            "SELECT ${AttendanceObj.NAME} FROM ${AttendanceObj.TB_NAME};",
             null
         )
         if (cursor != null) {
             cursor.moveToFirst()
             while (cursor.moveToNext()) {
-                names.add(cursor.getString(0))
+                val s = cursor.getString(0)
+                if (!names.contains(s))
+                    names.add(s)
             }
         }
-
         return names
     }
 
@@ -51,7 +52,30 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
         val db = this.readableDatabase
 
         val cursor = db.rawQuery(
-            "SELECT * FROM ${AttendanceObj.TB_NAME} WHERE ${AttendanceObj.NAME} = $name",
+            "SELECT * FROM ${AttendanceObj.TB_NAME} WHERE ${AttendanceObj.NAME} = '$name'",
+            null
+        )
+        if (cursor != null) {
+            cursor.moveToFirst()
+            while (cursor.moveToNext()) {
+                val attendanceObj = AttendanceObj(
+                    cursor.getLong(0),
+                    cursor.getLong(1),
+                    cursor.getString(2),
+                    cursor.getInt(3) != 0
+                )
+                arr.add(attendanceObj)
+            }
+        }
+        return arr
+    }
+
+    fun getBySsId(ssId: Long): ArrayList<AttendanceObj> {
+        val arr = ArrayList<AttendanceObj>()
+        val db = this.readableDatabase
+
+        val cursor = db.rawQuery(
+            "SELECT * FROM ${AttendanceObj.TB_NAME} WHERE ${AttendanceObj.SS_ID} = $ssId;",
             null
         )
         if (cursor != null) {

@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.subject_manager.ui.attendance.scan.ScanActivity">
+    tools:context=".ui.subject_manager.ui.attendance.scan.ScanResultActivity">
 
     <RelativeLayout
+        android:id="@+id/rlAppBar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@drawable/appbar_bg">
@@ -38,4 +39,30 @@
             android:background="@drawable/press_effect"
             app:srcCompat="@drawable/logo_trans" />
     </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAttendances"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlAppBar"
+        android:background="#FFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_qr_code_white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#26de81"
+        app:srcCompat="@drawable/ic_check" />
 </RelativeLayout>

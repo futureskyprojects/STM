@@ -8,6 +8,7 @@ import vn.vistark.stm.R
 
 class AttendanceNameAdapter(val names: ArrayList<String>) :
     RecyclerView.Adapter<AttendanceNameViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AttendanceNameViewHolder {
         val v =
             LayoutInflater.from(parent.context).inflate(R.layout.attendance_layout, parent, false)

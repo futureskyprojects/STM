@@ -38,7 +38,7 @@
                 android:shadowDy="1"
                 android:shadowRadius="3"
                 android:text="ABC XYZ"
-                android:textColor="#55efc4"
+                android:textColor="#e74c3c"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:text="DHCN3A"
+                android:text="DHCN3A hihi"
                 android:textAllCaps="true"
                 android:textColor="#fff"
                 android:textSize="14sp"

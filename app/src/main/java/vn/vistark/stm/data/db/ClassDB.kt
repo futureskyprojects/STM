@@ -13,11 +13,6 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
 
     }
 
-    init {
-        val classObj = ClassObj(1, "init class", "")
-        addClassObj(classObj)
-        deleteClassObj(classObj)
-    }
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE IF NOT EXISTS ${ClassObj.TB_NAME}(" +

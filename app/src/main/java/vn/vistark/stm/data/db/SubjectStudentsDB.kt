@@ -4,18 +4,14 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import es.dmoral.toasty.Toasty
 import vn.vistark.stm.data.model.SubjectStudentsObj
 
-class SubjectStudentsDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+class SubjectStudentsDB(val context: Context) :
+    SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     companion object {
         const val DB_NAME = "db_ss"
         const val DB_VERSION = 1
-    }
-
-    init {
-        val subjectStudentsObj = SubjectStudentsObj(1, 1, 1)
-        add(subjectStudentsObj)
-        delete(subjectStudentsObj)
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -87,13 +83,11 @@ class SubjectStudentsDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, n
         )
         if (cursor != null) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
-                subjectStudentsObj = SubjectStudentsObj(
-                    cursor.getLong(0),
-                    cursor.getLong(1),
-                    cursor.getLong(2)
-                )
-            }
+            subjectStudentsObj = SubjectStudentsObj(
+                cursor.getLong(0),
+                cursor.getLong(1),
+                cursor.getLong(2)
+            )
         }
         return subjectStudentsObj
     }
@@ -114,6 +108,21 @@ class SubjectStudentsDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, n
             }
         }
         return subjectStudentsObjArr
+    }
+
+    fun get(subjectId: Long, studentId: Long): SubjectStudentsObj? {
+        val db = this.writableDatabase
+        val cursor = db.rawQuery(
+            "SELECT * FROM ${SubjectStudentsObj.TB_NAME} WHERE ${SubjectStudentsObj.SUBJECT_ID}=${subjectId} AND ${SubjectStudentsObj.STUDENT_ID}=${studentId};",
+            null
+        )
+        if (cursor != null) {
+            cursor.moveToFirst()
+            val subjectStudentsObj =
+                SubjectStudentsObj(cursor.getLong(0), cursor.getLong(1), cursor.getLong(2))
+            return subjectStudentsObj
+        }
+        return null
     }
 
     fun delete(subjectStudentsObj: SubjectStudentsObj): Boolean {

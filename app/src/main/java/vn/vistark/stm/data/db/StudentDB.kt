@@ -12,11 +12,6 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         const val DB_VERSION = 1
     }
 
-    init {
-        val studentObj = StudentObj(1, 1, "init", "")
-        addStudent(studentObj)
-        deleteStudent(studentObj)
-    }
 
     override fun onCreate(db: SQLiteDatabase?) {
         val sql = "CREATE TABLE IF NOT EXISTS ${StudentObj.TB_NAME}(" +

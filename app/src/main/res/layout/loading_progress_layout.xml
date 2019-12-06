@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appbar_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="PROCESSING"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/pbProcessingProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:indeterminate="false"
+            android:progress="10" />
+
+        <TextView
+            android:id="@+id/tvStatusProcessing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="10% (12/300 Students)"
+            android:textColor="#34495e"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+</RelativeLayout>

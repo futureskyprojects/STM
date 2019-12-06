@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_analysis"
-        android:name="vn.vistark.stm.ui.subject_manager.ui.analysis.NotificationsFragment"
+        android:name="vn.vistark.stm.ui.subject_manager.ui.analysis.AnalysisFragment"
         android:label="Analysis"
         tools:layout="@layout/fragment_analysis" />
 </navigation>
