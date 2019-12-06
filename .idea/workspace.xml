@@ -6,48 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80259c5b-7b7a-4825-afad-f5145c3def05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/StudentAnalysisAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/StudentAnalysisViewHolder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/scan/Scan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/scan/ScanResultActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/utils/CreateQR.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/utils/Folder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/utils/Internet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/utils/Loading.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/utils/QRLink.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/____.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bt_cor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_qr_code_export.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_qr_code_white.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_two_side.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/loading_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/loading_progress_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/student_analysis_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/Bus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/Bus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/AttendanceDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/AttendanceDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/ClassDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/ClassDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/StudentDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/StudentDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/SubjectDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/SubjectDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/SubjectStudentsDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/data/db/SubjectStudentsDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/SubjectManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/SubjectManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/NotificationsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/AnalysisFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/NotificationsViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceNameAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceNameAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceNameViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/AttendanceNameViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/___AttendanceAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/scan/ScanAttendanceAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/attendance/scan/ScanActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bg_student.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bg_student.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_subject_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_subject_manager.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_analysis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_analysis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/student_obj_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/student_obj_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-    </list>
+    <list default="true" id="80259c5b-7b7a-4825-afad-f5145c3def05" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +36,7 @@
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -86,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/AnalysisFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="770">
-              <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -139,6 +98,9 @@
       <find>stdFile</find>
       <find>get</find>
     </findStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -468,7 +430,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2647504" />
@@ -485,7 +446,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.07692308" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.17839608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.40589198" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.049099836" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3289689" />
@@ -493,7 +454,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.2881997" />
+      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.2881997" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
     <layout-to-restore>
@@ -874,7 +835,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/vn/vistark/stm/ui/subject_manager/ui/analysis/AnalysisFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -892,7 +853,7 @@
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
