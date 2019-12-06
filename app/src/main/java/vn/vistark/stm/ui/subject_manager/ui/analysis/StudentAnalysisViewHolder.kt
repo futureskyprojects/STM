@@ -39,7 +39,7 @@ class StudentAnalysisViewHolder(v: View) : RecyclerView.ViewHolder(v) {
                     ok++
             }
             tvStudentAttendanceStatus.text =
-                "Attendance $ok/${attendances.size} (Miss ${ok * 100 / attendances.size}%)"
+                "Attendance $ok/${attendances.size} (Miss ${if (attendances.size <= 0) 0 else ok * 100 / attendances.size}%)"
         } else {
             tvStudentAttendanceStatus.text = "Undefined"
         }
