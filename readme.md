@@ -2,12 +2,23 @@
 ## (STM-Ứng dụng điểm danh sinh viên dùng mã QR)
 
 ## 1. Giới thiệu (Introduction)
-- Khó khăn
+- Khó khăn (Difficulties)
 <p>  Cách điểm danh SV thông thường gây nhiều khó khăn và phức tạp trong việc thống kê, kiểm soát, phân tích và đánh giá.  </p>
 <p>Nhiều phần mềm trên thị trường mang tính độc quyền cùng tính năng khó sử dụng, cũng như ứng dụng rác tràn lan khiến người dùng không biết đâu là ứng dụng đáng tin cậy.
 </p>
 <p>Sinh viên có thể trốn tiết ngay cả khi giáo viên điểm danh nếu áp dụng bằng cách làm thông thường.</p>
 <p>Để khắc phục những điều này nhóm phát triển phần mềm xây dựng ứng dụng hỗ trợ giáo viên trong việc điểm danh sinh viên bằng công nghệ. </p>
+
+- Giải pháp (Solutions)
+<p> Xây dựng một ứng dụng có thể nhận diện và quét mã vạch ngay trên smartphone của giáo viên </p>
+<p> Mỗi sinh viên khi đi học cần mang theo thẻ sinh viên, thẻ sinh viên sẽ được in mã QR bên trên </p>
+<p> Nếu sinh viên chưa nhận được thẻ sinh viên, giáo viên có thể nhập thông tin sinh viên và trích mã QR gửi cho phòng đào tạo. </p>
+
+- Công nghệ áp dụng (Technologies)
+<p> Android Studio 3.5 </p>
+<p> SQLite </p>
+<p> Kotlin</p>
+<p> Zxing 1.9 </p>
 
 ## 2. Tác giả (Author)
 <il> Tác giả : Nguyễn Trọng Nghĩa  </il> 
