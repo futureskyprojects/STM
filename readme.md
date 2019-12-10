@@ -48,6 +48,5 @@
 [![vwW5QW.jpg](https://b.imge.to/2019/12/10/vwW5QW.jpg)](https://imge.to/i/vwW5QW)
 [![vwWHhm.jpg](https://b.imge.to/2019/12/10/vwWHhm.jpg)](https://imge.to/i/vwWHhm)
 [![vwWddi.png](https://c.imge.to/2019/12/10/vwWddi.png)](https://imge.to/i/vwWddi)
-[![vwWkCV.png](https://a.imge.to/2019/12/10/vwWkCV.png)](https://imge.to/i/vwWkCV)
-[![vwWleT.png](https://a.imge.to/2019/12/10/vwWleT.png)](https://imge.to/i/vwWleT)
+
  	
