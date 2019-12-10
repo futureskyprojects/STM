@@ -170,42 +170,54 @@ class ScanResultActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 if (data != null) {
                     val myRes = QRLink.decode(this, data.getStringExtra(Scan.STUDENT_ID)!!)
-                    val studentSubjectObj =
-                        SubjectStudentsDB(this).get(Bus.SELECTED_SUBJECT, myRes.studentObj!!.id)
-                    if (studentSubjectObj != null) {
-                        val tempAttendanceObj = AttendanceObj(
-                            System.currentTimeMillis(),
-                            studentSubjectObj.ssId,
-                            Bus.CURRENT_ATTENDANCE_NAME,
-                            true
-                        )
-                        for (attendance in attendances) {
-                            if (attendance.ssId == tempAttendanceObj.ssId && attendance.name == tempAttendanceObj.name) {
-                                Toasty.warning(
-                                    this,
-                                    "This student was attendance",
-                                    Toasty.LENGTH_SHORT,
-                                    false
-                                ).show()
-                                return
-                            }
-                        }
-                        attendances.add(tempAttendanceObj)
-                        // Update result here
-                        scanAdapter.notifyDataSetChanged()
-                        // Announcement
-                        Toasty.success(
-                            this,
-                            "Student ${myRes.studentObj.name} (${myRes.classObj?.name}) took attendance"
-                            , Toasty.LENGTH_SHORT, false
-                        ).show()
-                    } else {
+                    if (myRes.studentObj == null) {
+                        Toasty.error(this, "This student not available", Toasty.LENGTH_SHORT, false)
+                            .show()
+                    } else if (myRes.classObj == null) {
                         Toasty.error(
                             this,
-                            "Sorry, this subject not contain this student",
+                            "Class of this student is not exists",
                             Toasty.LENGTH_SHORT,
                             false
                         ).show()
+                    } else {
+                        val studentSubjectObj =
+                            SubjectStudentsDB(this).get(Bus.SELECTED_SUBJECT, myRes.studentObj!!.id)
+                        if (studentSubjectObj != null) {
+                            val tempAttendanceObj = AttendanceObj(
+                                System.currentTimeMillis(),
+                                studentSubjectObj.ssId,
+                                Bus.CURRENT_ATTENDANCE_NAME,
+                                true
+                            )
+                            for (attendance in attendances) {
+                                if (attendance.ssId == tempAttendanceObj.ssId && attendance.name == tempAttendanceObj.name) {
+                                    Toasty.warning(
+                                        this,
+                                        "This student was attendance",
+                                        Toasty.LENGTH_SHORT,
+                                        false
+                                    ).show()
+                                    return
+                                }
+                            }
+                            attendances.add(tempAttendanceObj)
+                            // Update result here
+                            scanAdapter.notifyDataSetChanged()
+                            // Announcement
+                            Toasty.success(
+                                this,
+                                "Student ${myRes.studentObj.name} (${myRes.classObj?.name}) took attendance"
+                                , Toasty.LENGTH_SHORT, false
+                            ).show()
+                        } else {
+                            Toasty.error(
+                                this,
+                                "Sorry, this subject not contain this student",
+                                Toasty.LENGTH_SHORT,
+                                false
+                            ).show()
+                        }
                     }
                 } else {
                     Toasty.error(this, "Can not get info", Toasty.LENGTH_SHORT, false).show()

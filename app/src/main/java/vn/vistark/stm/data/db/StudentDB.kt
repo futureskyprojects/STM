@@ -85,12 +85,16 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
             )
         if (cursor != null) {
             cursor.moveToFirst()
-            studentObj = StudentObj(
-                cursor.getLong(0),
-                cursor.getLong(1),
-                cursor.getString(2),
-                cursor.getString(3)
-            )
+            try {
+                studentObj = StudentObj(
+                    cursor.getLong(0),
+                    cursor.getLong(1),
+                    cursor.getString(2),
+                    cursor.getString(3)
+                )
+            } catch (e: Exception) {
+
+            }
         }
         return studentObj
     }

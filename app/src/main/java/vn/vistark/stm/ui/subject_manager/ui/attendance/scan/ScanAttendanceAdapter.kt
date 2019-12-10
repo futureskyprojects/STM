@@ -33,6 +33,8 @@ class ScanAttendanceAdapter(val attendances: ArrayList<AttendanceObj>) :
             holder.bind(studentObj!!)
             if (!attendanceObj.isAttendance) {
                 holder.tvStudentName.setTextColor(Color.RED)
+            } else {
+                holder.tvStudentName.setTextColor(Color.parseColor("#341f97"))
             }
         } else {
             attendances.removeAt(position)

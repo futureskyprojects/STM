@@ -38,7 +38,7 @@
                 android:shadowDy="1"
                 android:shadowRadius="3"
                 android:text="ABC XYZ"
-                android:textColor="#e74c3c"
+                android:textColor="#341f97"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
