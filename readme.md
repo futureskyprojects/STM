@@ -1,8 +1,8 @@
 # Student Attendance Using QR-Code 
 ## (STM-Ứng dụng điểm danh sinh viên dùng mã QR)
-</br>
+
 ## 1. Giới thiệu
-### Khó khăn
+- Khó khăn
 <p>  Cách điểm danh SV thông thường gây nhiều khó khăn và phức tạp trong việc thống kê, kiểm soát, phân tích và đánh giá.  </p>
 <p>Nhiều phần mềm trên thị trường mang tính độc quyền cùng tính năng khó sử dụng, cũng như ứng dụng rác tràn lan khiến người dùng không biết đâu là ứng dụng đáng tin cậy.
 </p>
