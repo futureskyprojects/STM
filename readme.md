@@ -47,6 +47,5 @@
 [![vwWZPF.jpg](https://c.imge.to/2019/12/10/vwWZPF.jpg)](https://imge.to/i/vwWZPF)
 [![vwW5QW.jpg](https://b.imge.to/2019/12/10/vwW5QW.jpg)](https://imge.to/i/vwW5QW)
 [![vwWHhm.jpg](https://b.imge.to/2019/12/10/vwWHhm.jpg)](https://imge.to/i/vwWHhm)
-[![vwWddi.png](https://c.imge.to/2019/12/10/vwWddi.png)](https://imge.to/i/vwWddi)
 
  	
