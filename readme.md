@@ -8,6 +8,7 @@
 </p>
 <p>Sinh viên có thể trốn tiết ngay cả khi giáo viên điểm danh nếu áp dụng bằng cách làm thông thường.</p>
 <p>Để khắc phục những điều này nhóm phát triển phần mềm xây dựng ứng dụng hỗ trợ giáo viên trong việc điểm danh sinh viên bằng công nghệ </p>
+
 ## 2. Tác giả
 <il> Tác giả : Nguyễn Trọng Nghĩa  </il> 
 [Github Account](https://github.com/futureskyprojects)
