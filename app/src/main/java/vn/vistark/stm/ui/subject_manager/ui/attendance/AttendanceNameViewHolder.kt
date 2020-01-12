@@ -11,7 +11,7 @@ import vn.vistark.stm.ui.subject_manager.ui.attendance.scan.ScanResultActivity
 
 class AttendanceNameViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     val cvRoot: CardView = v.findViewById(R.id.cvRoot)
-    val tvAttendanceTitle: TextView = v.findViewById(R.id.tvAttendanceTitle)
+    private val tvAttendanceTitle: TextView = v.findViewById(R.id.tvAttendanceTitle)
 
     fun bind(name: String) {
         tvAttendanceTitle.text = name

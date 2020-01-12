@@ -63,13 +63,13 @@ class SubjectStudentsDB(val context: Context) :
         val subjectStudentsObjArr: ArrayList<SubjectStudentsObj> = ArrayList()
         val db = this.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM ${SubjectStudentsObj.TB_NAME};", null)
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val subjectStudentsObj =
                     SubjectStudentsObj(cursor.getLong(0), cursor.getLong(1), cursor.getLong(2))
                 subjectStudentsObjArr.add(subjectStudentsObj)
-            }
+            } while (cursor.moveToNext())
         }
         return subjectStudentsObjArr
     }
@@ -81,7 +81,7 @@ class SubjectStudentsDB(val context: Context) :
             "SELECT * FROM ${SubjectStudentsObj.TB_NAME} WHERE ${SubjectStudentsObj.SS_ID}=$id",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
             subjectStudentsObj = SubjectStudentsObj(
                 cursor.getLong(0),
@@ -99,13 +99,13 @@ class SubjectStudentsDB(val context: Context) :
             "SELECT * FROM ${SubjectStudentsObj.TB_NAME} WHERE ${SubjectStudentsObj.SUBJECT_ID}=${subjectId};",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val subjectStudentsObj =
                     SubjectStudentsObj(cursor.getLong(0), cursor.getLong(1), cursor.getLong(2))
                 subjectStudentsObjArr.add(subjectStudentsObj)
-            }
+            } while (cursor.moveToNext())
         }
         return subjectStudentsObjArr
     }
@@ -116,7 +116,7 @@ class SubjectStudentsDB(val context: Context) :
             "SELECT * FROM ${SubjectStudentsObj.TB_NAME} WHERE ${SubjectStudentsObj.SUBJECT_ID}=${subjectId} AND ${SubjectStudentsObj.STUDENT_ID}=${studentId};",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
             val subjectStudentsObj =
                 SubjectStudentsObj(cursor.getLong(0), cursor.getLong(1), cursor.getLong(2))
@@ -125,7 +125,7 @@ class SubjectStudentsDB(val context: Context) :
         return null
     }
 
-    fun delete(subjectStudentsObj: SubjectStudentsObj): Boolean {
+    fun remove(subjectStudentsObj: SubjectStudentsObj): Boolean {
         val db = this.writableDatabase
         val res = db.delete(
             SubjectStudentsObj.TB_NAME,

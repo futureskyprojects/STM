@@ -36,13 +36,13 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
             "SELECT ${AttendanceObj.NAME} FROM ${AttendanceObj.TB_NAME};",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val s = cursor.getString(0)
                 if (!names.contains(s))
                     names.add(s)
-            }
+            } while (cursor.moveToNext())
         }
         return names
     }
@@ -55,9 +55,9 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
             "SELECT * FROM ${AttendanceObj.TB_NAME} WHERE ${AttendanceObj.NAME} = '$name'",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val attendanceObj = AttendanceObj(
                     cursor.getLong(0),
                     cursor.getLong(1),
@@ -65,7 +65,7 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
                     cursor.getInt(3) != 0
                 )
                 arr.add(attendanceObj)
-            }
+            } while (cursor.moveToNext())
         }
         return arr
     }
@@ -78,9 +78,9 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
             "SELECT * FROM ${AttendanceObj.TB_NAME} WHERE ${AttendanceObj.SS_ID} = $ssId;",
             null
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val attendanceObj = AttendanceObj(
                     cursor.getLong(0),
                     cursor.getLong(1),
@@ -88,7 +88,7 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
                     cursor.getInt(3) != 0
                 )
                 arr.add(attendanceObj)
-            }
+            } while (cursor.moveToNext())
         }
         return arr
     }
@@ -124,7 +124,7 @@ class AttendanceDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, 
         return res != -1
     }
 
-    fun delete(attendanceObj: AttendanceObj): Boolean {
+    fun remove(attendanceObj: AttendanceObj): Boolean {
         val db = this.writableDatabase
         val res = db.delete(
             AttendanceObj.TB_NAME, "${AttendanceObj.ID}=?",

@@ -1,4 +1,4 @@
-#Tue Dec 10 14:24:22 ICT 2019
+#Sun Jan 12 20:11:31 ICT 2020
 base.0=F\:\\Freelancer\\MyCode\\STM\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

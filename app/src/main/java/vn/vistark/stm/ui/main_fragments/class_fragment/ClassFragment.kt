@@ -16,8 +16,15 @@ import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_class.*
 
 import vn.vistark.stm.R
+import vn.vistark.stm.data.Bus
+import vn.vistark.stm.data.db.AttendanceDB
 import vn.vistark.stm.data.db.ClassDB
+import vn.vistark.stm.data.db.StudentDB
+import vn.vistark.stm.data.db.SubjectStudentsDB
 import vn.vistark.stm.data.model.ClassObj
+import vn.vistark.stm.data.model.StudentObj
+import vn.vistark.stm.data.model.SubjectObj
+import vn.vistark.stm.data.model.SubjectStudentsObj
 import vn.vistark.stm.ui.main_fragments.BaseFrg
 
 class ClassFragment : Fragment(), BaseFrg {
@@ -97,6 +104,39 @@ class ClassFragment : Fragment(), BaseFrg {
     private fun initAdapter() {
         classes = ClassDB(context!!).getAllClassObj()
         adapter = ClassAdater(classes, classEmpty)
+
+        adapter.onItemClick = {
+            val dialog = AlertDialog.Builder(context)
+            dialog.setTitle("Remove this student?")
+            dialog.setMessage("You can not recovery. Are you sure?")
+                .setPositiveButton("Yes") { d, w ->
+                    // data base
+                    val attDb = AttendanceDB(context!!)
+                    val ssDb = SubjectStudentsDB(context!!)
+                    val stDb = StudentDB(context!!)
+
+                    for (st in stDb.getAllStudent()) {
+                        for (ss in ssDb.getAll()) {
+                            if (ss.studentId == st.id) {
+                                for (atts in attDb.getBySsId(ss.ssId)) {
+                                    attDb.remove(atts)
+                                }
+                                ssDb.remove(ss)
+                            }
+                        }
+                        stDb.deleteStudent(st)
+                    }
+
+                    ClassDB(context!!).deleteClassObj(it)
+                    classes.remove(it)
+                    adapter.notifyDataSetChanged()
+                }
+                .setNegativeButton("No") { d, w ->
+                    d.cancel()
+                }
+            dialog.create()
+            dialog.show()
+        }
     }
 
     private fun initViews(v: View) {

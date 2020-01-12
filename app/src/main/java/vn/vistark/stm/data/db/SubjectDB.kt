@@ -70,16 +70,16 @@ class SubjectDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
             "SELECT * FROM ${SubjectObj.TB_NAME} WHERE ${SubjectObj.ID}=$id;",
             emptyArray<String>()
         )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val subject = SubjectObj(
                     cursor.getLong(0),
                     cursor.getString(1),
                     cursor.getString(2)
                 )
                 return subject
-            }
+            } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()
@@ -92,16 +92,16 @@ class SubjectDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         val subjects = ArrayList<SubjectObj>()
 
         val cursor = db.rawQuery("SELECT * FROM ${SubjectObj.TB_NAME};", emptyArray<String>())
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val subject = SubjectObj(
                     cursor.getLong(0),
                     cursor.getString(1),
                     cursor.getString(2)
                 )
                 subjects.add(subject)
-            }
+            } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()

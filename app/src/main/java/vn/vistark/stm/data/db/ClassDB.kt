@@ -56,16 +56,16 @@ class ClassDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VE
         val db = this.readableDatabase
         val cursor =
             db.rawQuery("SELECT * FROM ${ClassObj.TB_NAME};", emptyArray<String>())
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val classObj = ClassObj(
                     cursor.getLong(0),
                     cursor.getString(1),
                     cursor.getString(2)
                 )
                 classObjs.add(classObj)
-            }
+            } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()

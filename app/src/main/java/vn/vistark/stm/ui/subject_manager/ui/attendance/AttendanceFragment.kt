@@ -83,4 +83,6 @@ class AttendanceFragment : Fragment() {
         rvAttendances = v.findViewById(R.id.rvAttendances)
         fabAddNewAttendance = v.findViewById(R.id.fabNewAttendance)
     }
+
+
 }

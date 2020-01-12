@@ -83,7 +83,7 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
                 "SELECT * FROM ${StudentObj.TB_NAME} WHERE ${StudentObj.ID} = $studentId;",
                 null
             )
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
             try {
                 studentObj = StudentObj(
@@ -103,9 +103,9 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
         val db = this.readableDatabase
         val arr = ArrayList<StudentObj>()
         val cursor = db.rawQuery("SELECT * FROM ${StudentObj.TB_NAME};", emptyArray<String>())
-        if (cursor != null) {
+        if (cursor != null && cursor.count > 0) {
             cursor.moveToFirst()
-            while (cursor.moveToNext()) {
+            do {
                 val std = StudentObj(
                     cursor.getLong(0),
                     cursor.getLong(1),
@@ -113,7 +113,7 @@ class StudentDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_
                     cursor.getString(3)
                 )
                 arr.add(std)
-            }
+            } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()

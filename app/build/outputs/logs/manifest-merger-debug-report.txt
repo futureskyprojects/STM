@@ -5,15 +5,15 @@ INJECTED from F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:2:1-57:1
 INJECTED from F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:2:1-57:12
 INJECTED from F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml:2:1-57:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3604ec861586052aed14c4d6c57e7461\navigation-ui-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\8043b93a9de2a68b420391b06b796b40\jetified-navigation-ui-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\cc0db9dacc2ac19613c41fc025fc7bad\jetified-navigation-ui-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\d125ee9057315ab02e408350692d0cb9\material-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\244aaf2cf397a3bb480dbc8c2ad698b6\jetified-Toasty-1.4.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3ebca41c02ae3edf8d484637a32f4edd\jetified-Toasty-1.4.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\bc466c33e573d3599a593a7929d50e38\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\1d106697599ff25fb3226556e49601ea\core-ktx-1.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\495a4330151a662138962153d4278c86\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\720e4bdf8ec5873132a269845fcca317\lifecycle-extensions-2.1.0\AndroidManifest.xml:17:1-25:12
 MERGED from [me.dm7.barcodescanner:zxing:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\f28b708b70cbeef76cf89385d637c242\zxing-1.9\AndroidManifest.xml:2:1-13:12
-MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\b9b944dcbde7c2e2088950ef2bdb104b\jetified-core-1.9\AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3a2b412bcbd8923b6039888a5523cf90\jetified-core-1.9\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\1ebf11ab28562c516f5b50e30cdb526b\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\927bd1ddefc54ae750735a96000e14b2\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\5550257517f680917945e34c57d15d50\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -114,8 +114,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Vistark\.gr
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\720e4bdf8ec5873132a269845fcca317\lifecycle-extensions-2.1.0\AndroidManifest.xml:22:5-23:19
 MERGED from [me.dm7.barcodescanner:zxing:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\f28b708b70cbeef76cf89385d637c242\zxing-1.9\AndroidManifest.xml:11:5-20
 MERGED from [me.dm7.barcodescanner:zxing:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\f28b708b70cbeef76cf89385d637c242\zxing-1.9\AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\b9b944dcbde7c2e2088950ef2bdb104b\jetified-core-1.9\AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\b9b944dcbde7c2e2088950ef2bdb104b\jetified-core-1.9\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3a2b412bcbd8923b6039888a5523cf90\jetified-core-1.9\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3a2b412bcbd8923b6039888a5523cf90\jetified-core-1.9\AndroidManifest.xml:11:5-20
 MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\a6457598d43491b4b7d083f6a6346426\circleimageview-3.0.1\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\a6457598d43491b4b7d083f6a6346426\circleimageview-3.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\419c1e4c69cc84d0a9af6aedb8b39477\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -206,12 +206,12 @@ INJECTED from F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml
 INJECTED from F:\Freelancer\MyCode\STM\app\src\main\AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3604ec861586052aed14c4d6c57e7461\navigation-ui-ktx-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3604ec861586052aed14c4d6c57e7461\navigation-ui-ktx-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\8043b93a9de2a68b420391b06b796b40\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\8043b93a9de2a68b420391b06b796b40\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\cc0db9dacc2ac19613c41fc025fc7bad\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\cc0db9dacc2ac19613c41fc025fc7bad\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\d125ee9057315ab02e408350692d0cb9\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\d125ee9057315ab02e408350692d0cb9\material-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\244aaf2cf397a3bb480dbc8c2ad698b6\jetified-Toasty-1.4.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\244aaf2cf397a3bb480dbc8c2ad698b6\jetified-Toasty-1.4.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3ebca41c02ae3edf8d484637a32f4edd\jetified-Toasty-1.4.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3ebca41c02ae3edf8d484637a32f4edd\jetified-Toasty-1.4.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\bc466c33e573d3599a593a7929d50e38\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\bc466c33e573d3599a593a7929d50e38\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\1d106697599ff25fb3226556e49601ea\core-ktx-1.1.0\AndroidManifest.xml:5:5-7:41
@@ -222,8 +222,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Vistark\.gr
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\720e4bdf8ec5873132a269845fcca317\lifecycle-extensions-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [me.dm7.barcodescanner:zxing:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\f28b708b70cbeef76cf89385d637c242\zxing-1.9\AndroidManifest.xml:7:5-9:41
 MERGED from [me.dm7.barcodescanner:zxing:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\f28b708b70cbeef76cf89385d637c242\zxing-1.9\AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\b9b944dcbde7c2e2088950ef2bdb104b\jetified-core-1.9\AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\b9b944dcbde7c2e2088950ef2bdb104b\jetified-core-1.9\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3a2b412bcbd8923b6039888a5523cf90\jetified-core-1.9\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\3a2b412bcbd8923b6039888a5523cf90\jetified-core-1.9\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\1ebf11ab28562c516f5b50e30cdb526b\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\1ebf11ab28562c516f5b50e30cdb526b\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Vistark\.gradle\caches\transforms-2\files-2.1\927bd1ddefc54ae750735a96000e14b2\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41

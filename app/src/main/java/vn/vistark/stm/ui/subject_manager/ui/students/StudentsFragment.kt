@@ -13,6 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import es.dmoral.toasty.Toasty
 import vn.vistark.stm.R
 import vn.vistark.stm.data.Bus
+import vn.vistark.stm.data.db.AttendanceDB
 import vn.vistark.stm.data.db.StudentDB
 import vn.vistark.stm.data.db.SubjectStudentsDB
 import vn.vistark.stm.data.model.StudentObj
@@ -43,8 +44,15 @@ class StudentsFragment : Fragment() {
         val studentDb = StudentDB(context!!)
         ss.forEach {
             val studentObj = studentDb.getStudent(it.studentId)
-            if (studentObj != null)
-                students.add((studentObj))
+            if (studentObj != null) {
+                var isHave = false
+                for (st in students) {
+                    if (st.id == studentObj.id)
+                        isHave = true
+                }
+                if (!isHave)
+                    students.add((studentObj))
+            }
         }
         studentAdapter = StudentAdapter(students, null)
 
@@ -52,6 +60,45 @@ class StudentsFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter = studentAdapter
+        }
+
+        studentAdapter.onItemClick = {
+            val dialog = AlertDialog.Builder(context)
+            dialog.setTitle("Remove this student?")
+            dialog.setMessage("You can not recovery. Are you sure?")
+                .setPositiveButton("Yes") { d, w ->
+                    val ssDb = SubjectStudentsDB(context!!)
+                    val ssObj = ssDb.get(Bus.SELECTED_SUBJECT, it.id)
+                    if (ssObj != null) {
+                        val attDb = AttendanceDB(context!!)
+                        val atts = attDb.getBySsId(ssObj.ssId)
+                        if (atts.size > 0) {
+                            for (att in atts) {
+                                attDb.remove(att)
+                            }
+                        }
+
+                        if (ssDb.remove(ssObj)) {
+                            for (i in 0..students.size) {
+                                if (students[i].id == ssObj.studentId) {
+                                    students.removeAt(i)
+                                    break
+                                }
+                            }
+                        }
+
+                        Toasty.success(context!!, "Successful", Toasty.LENGTH_SHORT, false).show()
+                        studentAdapter.notifyDataSetChanged()
+                        return@setPositiveButton
+                    }
+                    Toasty.error(context!!, "Error, please try again.", Toasty.LENGTH_SHORT, false)
+                        .show()
+                }
+                .setNegativeButton("No") { d, w ->
+                    d.cancel()
+                }
+            dialog.create()
+            dialog.show()
         }
     }
 

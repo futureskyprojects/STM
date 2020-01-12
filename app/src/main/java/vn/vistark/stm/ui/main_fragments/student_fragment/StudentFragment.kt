@@ -17,8 +17,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import es.dmoral.toasty.Toasty
 
 import vn.vistark.stm.R
+import vn.vistark.stm.data.Bus
+import vn.vistark.stm.data.db.AttendanceDB
 import vn.vistark.stm.data.db.ClassDB
 import vn.vistark.stm.data.db.StudentDB
+import vn.vistark.stm.data.db.SubjectStudentsDB
 import vn.vistark.stm.data.model.ClassObj
 import vn.vistark.stm.data.model.StudentObj
 import vn.vistark.stm.ui.main_fragments.BaseFrg
@@ -170,6 +173,31 @@ class StudentFragment : Fragment(), BaseFrg {
         rvStudents.setHasFixedSize(true)
 
         rvStudents.adapter = adapter
+
+        adapter.onItemClick = {
+            val dialog = AlertDialog.Builder(context)
+            dialog.setTitle("Remove this student?")
+            dialog.setMessage("You can not recovery. Are you sure?")
+                .setPositiveButton("Yes") { d, w ->
+                    if (StudentDB(context!!).deleteStudent(it)) {
+                        students.remove(it)
+                        adapter.notifyDataSetChanged()
+                        Toasty.error(context!!, "Successful", Toasty.LENGTH_SHORT, false).show()
+                    } else {
+                        Toasty.error(
+                            context!!,
+                            "Error, please try again.",
+                            Toasty.LENGTH_SHORT,
+                            false
+                        ).show()
+                    }
+                }
+                .setNegativeButton("No") { d, w ->
+                    d.cancel()
+                }
+            dialog.create()
+            dialog.show()
+        }
 
     }
 
