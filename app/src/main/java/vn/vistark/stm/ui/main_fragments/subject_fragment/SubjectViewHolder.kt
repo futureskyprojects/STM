@@ -11,7 +11,7 @@ import vn.vistark.stm.data.model.SubjectObj
 import vn.vistark.stm.ui.subject_manager.SubjectManager
 
 class SubjectViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-    private val tvSubjectName: TextView = v.findViewById(R.id.tvSubjectName)
+    val tvSubjectName: TextView = v.findViewById(R.id.tvSubjectName)
 
     fun bind(subjectObj: SubjectObj) {
         tvSubjectName.text = subjectObj.name
